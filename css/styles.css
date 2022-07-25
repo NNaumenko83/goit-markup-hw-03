@@ -23,8 +23,10 @@
 	--primary-text-color: #757575;
 	--title-text-color: #212121;
 	--accent-color: #2196f3;
+	--accent-button-color: #ffffff;
 	--second-text-color: rgba(255, 255, 255, 0.6);
 	--secondary-background-color: #f5f4fa;
+	--third-text-color: #ffffff;
 	--third-background-color: #2f303a;
 	--main-background-color: #ffffff;
 }
@@ -37,8 +39,24 @@ body {
 	letter-spacing: 0.03em;
 	font-size: 14px;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
 /* Прибираємо крапки зі списків */
+/* Обнуляємо padding and margin списків */
 .list {
+	padding: 0;
+	margin: 0;
+
 	list-style: none;
 }
 
@@ -48,6 +66,50 @@ body {
 }
 
 /* Хедер */
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	width: 1200px;
+	outline: 2px solid darkred;
+}
+
+.container-header {
+	display: flex;
+	align-items: center;
+	/* justify-content: space-between; */
+
+	background-color: chartreuse;
+}
+
+.header-nav {
+	display: flex;
+	align-items: center;
+
+	background-color: aqua;
+}
+
+.contacts-list {
+	display: flex;
+
+	margin-left: auto;
+	background-color: coral;
+}
+
+.contacts-list-item .link {
+	display: block;
+	padding-top: 32px;
+	padding-bottom: 32px;
+
+	background-color: darksalmon;
+}
+
+.header-nav-list {
+	display: flex;
+}
 
 /* Логотип */
 
@@ -100,34 +162,66 @@ body {
 	letter-spacing: 0.02em;
 }
 
+.header-nav-list .link {
+	padding-top: 32px;
+	padding-bottom: 32px;
+}
+
+.logo-link {
+	margin-right: 93px;
+	padding-top: 24px;
+	padding-bottom: 25px;
+}
+
+.header-nav-list .nav-list-item + .nav-list-item {
+	margin-left: 50px;
+}
+
+.header-nav .link,
+.logo-link {
+	display: block;
+}
+
+.contacts-list .contacts-list-item + .contacts-list-item {
+	margin-left: 50px;
+}
+
 /* Заголовки секцій і списків */
 
-/* Секція герой */
+/* ---------ГЕРОЙ--------- */
+
 .section-hero-title,
 .footer .logo-studio {
-	color: var(--main-background-color);
+	color: var(--third-text-color);
 }
 
 .section-hero {
+	text-align: center;
+
+	margin-bottom: 94px;
 	background-color: #2f303a;
 }
 
 .section-hero-title {
+	margin-bottom: 30;
+
 	font-weight: 900;
 	font-size: 44px;
 	line-height: 1.36;
 	text-align: center;
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
+
+	outline: 2px solid blue;
 }
 
+
 .section-hero-btn {
-	color: var(--main-background-color);
+	color: var(--accent-button-color);
 	font-family: inherit;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 1.88;
-	display: flex;
 	align-items: center;
 	text-align: center;
 	letter-spacing: 0.06em;
@@ -135,8 +229,16 @@ body {
 	cursor: pointer;
 }
 
-/* Секція Особливості роботи */
+.btn {
+	border-radius: 4px;
+	border: 0;
+}
+
+/* ---------ОСОБЛИВОСТІ РОБОТИ--------- */
+
 .features-list-title {
+	margin-bottom: 10px;
+
 	color: var(--title-text-color);
 	font-weight: 700;
 	font-size: inherit;
@@ -145,20 +247,50 @@ body {
 }
 
 .features-list-text {
+	margin: 0;
 	font-size: inherit;
 	line-height: 1.71;
 }
 
-/* Секція чим ми займаємось */
+.features-list {
+	display: flex;
+	margin-bottom: 94px;
+}
+
+.features-list-item {
+	width: 270px;
+
+	background-color: aqua;
+}
+
+.features-list .features-list-item + .features-list-item {
+	margin-left: 30px;
+}
+
+/* ---------ЧИМ МИ ЗАЙМАЄМОСЬ--------- */
+
 .section-about-title,
 .section-team-title {
+	margin-bottom: 50px;
+
 	color: var(--title-text-color);
 	font-weight: 700;
 	font-size: 36px;
 	line-height: 1.16;
 	text-align: center;
 }
-/* Секція наша команда */
+
+.section-about-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.about-list-item {
+	margin-bottom: 0;
+
+	background-color: blueviolet;
+}
+/* ---------НАША КОМАНДА--------- */
 
 .team-item-title {
 	color: var(--title-text-color);
@@ -175,6 +307,9 @@ body {
 }
 
 .section-team {
+	padding-top: 94px;
+	padding-bottom: 94px;
+
 	background: var(--secondary-background-color);
 }
 /* Футер */
@@ -187,7 +322,7 @@ body {
 }
 
 .adress-list .adress-link {
-	color: var(--main-background-color);
+	color: var(--third-text-color);
 }
 
 .adress-list {
@@ -212,6 +347,8 @@ body {
 /* Button */
 
 .portfolio-list-btn {
+	padding: 6px 22px;
+
 	letter-spacing: 0.03em;
 	color: var(--title-text-color);
 	background-color: var(--secondary-background-color);
@@ -220,7 +357,7 @@ body {
 }
 
 .portfolio-list-btn.primary {
-	color: #ffffff;
+	color: var(--accent-button-color);
 	background-color: var(--accent-color);
 	font-weight: 500;
 	font-size: 16px;
@@ -237,7 +374,7 @@ body {
 
 .portfolio-list-btn:hover,
 .portfolio-list-btn:focus {
-	color: #ffffff;
+	color: var(--accent-button-color);
 	background-color: var(--accent-color);
 }
 
@@ -257,6 +394,26 @@ body {
 	line-height: 1.88;
 }
 
+.portfolio-project-list {
+	display: flex;
+	flex-wrap: wrap;
+
+	background-color: #2196f3;
+}
+
+.project-list-item {
+	width: calc((100% - 60px) / 3));
+	margin-right: 30px;
+
+	background-color: blueviolet;
+}
+
+.project-list-item:nth-child(3n) {
+	margin-right: 0;
+}
+
+.project-list-item:nth-child(-n+3){margin-bottom: 30px;}
+
 .visually-hidden {
 	position: absolute;
 	width: 1px;
@@ -270,3 +427,8 @@ body {
 	clip: rect(0 0 0 0);
 	overflow: hidden;
 }
+
+
+.portfolio-buttons-list{ display: flex;
+text-align: center;
+background-color: ;}
