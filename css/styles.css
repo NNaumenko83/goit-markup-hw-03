@@ -31,7 +31,8 @@
 	--main-background-color: #ffffff;
 	--header-border-line-color: #ececec;
 	--cards-border-color: #eeeeee;
-	--outline: 1px solid red;
+	/* --outline: 1px solid red; */
+	--container-outline: 2px solid blue;
 }
 
 /* Основні стилі */
@@ -41,6 +42,25 @@ body {
 	font-family: Roboto, sans-serif;
 	letter-spacing: 0.03em;
 	font-size: 14px;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	width: 1200px;
+}
+
+.section {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+
+.btn {
+	border-radius: 4px;
+	border: 0;
 }
 
 h1,
@@ -78,44 +98,25 @@ img {
 
 /* Хедер */
 
-.container {
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 15px;
-	padding-right: 15px;
-
-	width: 1200px;
-	outline: var(--outline);
-}
-
 .container-header {
 	display: flex;
 	align-items: center;
-	/* justify-content: space-between; */
-
-	/* background-color: chartreuse; */
 }
 
 .header-nav {
 	display: flex;
 	align-items: center;
-
-	/* background-color: aqua; */
 }
 
 .contacts-list {
 	display: flex;
-
 	margin-left: auto;
-	/* background-color: coral; */
 }
 
 .contacts-list-item .link {
 	display: block;
 	padding-top: 32px;
 	padding-bottom: 32px;
-
-	/* background-color: darksalmon; */
 }
 
 .header-nav-list {
@@ -211,9 +212,10 @@ img {
 }
 
 .section-hero {
-	text-align: center;
-
 	background-color: #2f303a;
+
+	padding-top: 200px;
+	padding-bottom: 200px;
 }
 
 .section-hero-title {
@@ -224,10 +226,20 @@ img {
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
 
-	/* outline: var(--outline ); */
+	max-width: 696px;
+
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
 }
 
 .section-hero-btn {
+	display: block;
+
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px 32px;
+
 	color: var(--accent-button-color);
 	font-family: inherit;
 	font-weight: 700;
@@ -240,22 +252,10 @@ img {
 	cursor: pointer;
 }
 
-.btn {
-	border-radius: 4px;
-	border: 0;
-}
-
-.hero-title {
-	width: 696px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 30px;
-}
-
 /* ---------ОСОБЛИВОСТІ РОБОТИ--------- */
 
 .section-features {
-	padding-top: 94px;
+	padding-bottom: 0;
 	outline: var(--outline);
 }
 
@@ -271,6 +271,7 @@ img {
 
 .features-list-text {
 	margin: 0;
+
 	font-size: inherit;
 	line-height: 1.71;
 }
@@ -281,9 +282,6 @@ img {
 
 .features-list-item {
 	width: 270px;
-	outline: var(--outline);
-
-	/* background-color: aqua; */
 }
 
 .features-list .features-list-item + .features-list-item {
@@ -291,9 +289,6 @@ img {
 }
 
 /* ---------ЧИМ МИ ЗАЙМАЄМОСЬ--------- */
-.section-about {
-	outline: var(--outline);
-}
 
 .section-about-title,
 .section-team-title {
@@ -313,14 +308,8 @@ img {
 	justify-content: space-between;
 }
 
-.section-about {
-	padding-top: 94px;
-}
-
 .about-list-item {
 	padding-bottom: 0;
-
-	/* background-color: blueviolet; */
 }
 /* ---------НАША КОМАНДА--------- */
 
@@ -339,9 +328,6 @@ img {
 }
 
 .section-team {
-	padding-top: 94px;
-	padding-bottom: 94px;
-
 	background: var(--secondary-background-color);
 }
 
@@ -361,7 +347,7 @@ img {
 }
 
 .team-item-title {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .team-item {
@@ -370,12 +356,13 @@ img {
 }
 
 .card-team {
-	padding: 30px 15px;
-	background-color: hotpink;
+	padding: 30px 0;
 }
 
 /* Футер */
-
+.adress {
+	max-width: 231px;
+}
 .adress-list .link {
 	font-style: normal;
 	color: var(--second-text-color);
@@ -417,11 +404,6 @@ img {
 
 /* Головна секція - портфоліо */
 
-.section-portfolio {
-	padding-top: 94px;
-	outline: var(--outline);
-}
-
 /* --------- BUTTONS ---------*/
 
 .portfolio-list-btn {
@@ -458,13 +440,15 @@ img {
 
 .portfolio-buttons-list {
 	display: flex;
+
 	text-align: center;
+
 	width: 575px;
+
+	padding-bottom: 16px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 50px;
-	background-color: yellowgreen;
-	outline: var(--outline);
+	margin-bottom: 34px;
 }
 
 .buttons-list-item:not(:last-child) {
@@ -475,12 +459,9 @@ img {
 .portfolio-project-list {
 	display: flex;
 	flex-wrap: wrap;
-	outline: var(--outline);
-	/* background-color: #2196f3; */
 }
 
 .card-portfolio {
-	outline: var(--outline);
 	padding: 20px 24px;
 }
 
@@ -506,7 +487,6 @@ img {
 
 	background: #ffffff;
 	border: 1px solid var(--cards-border-color);
-	outline: var(--outline);
 }
 
 .project-list-item:nth-child(3n) {
