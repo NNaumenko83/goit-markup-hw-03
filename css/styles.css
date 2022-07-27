@@ -463,6 +463,9 @@ img {
 
 .card-portfolio {
 	padding: 20px 24px;
+	border-left: 1px solid var(--cards-border-color);
+	border-right: 1px solid var(--cards-border-color);
+	border-bottom: 1px solid var(--cards-border-color);
 }
 
 .project-list-title {
@@ -486,7 +489,6 @@ img {
 	margin-right: 30px;
 
 	background: #ffffff;
-	border: 1px solid var(--cards-border-color);
 }
 
 .project-list-item:nth-child(3n) {
