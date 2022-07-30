@@ -31,8 +31,8 @@
 	--main-background-color: #ffffff;
 	--header-border-line-color: #ececec;
 	--cards-border-color: #eeeeee;
-	/* --outline: 1px solid red; */
-	--container-outline: 2px solid blue;
+
+	--container-outline: 1px solid red;
 }
 
 /* Основні стилі */
@@ -51,16 +51,13 @@ body {
 	padding-right: 15px;
 
 	width: 1200px;
+
+	outline: var(--container-outline);
 }
 
 .section {
 	padding-top: 94px;
 	padding-bottom: 94px;
-}
-
-.btn {
-	border-radius: 4px;
-	border: 0;
 }
 
 h1,
@@ -71,8 +68,7 @@ h5,
 h6,
 ul,
 p {
-	margin-top: 0;
-	margin-bottom: 0;
+	margin: 0;
 }
 
 img {
@@ -80,8 +76,9 @@ img {
 	max-width: 100%;
 	height: auto;
 
-	outline: var(--outline);
+	/* outline: var(--outline); */
 }
+
 /* Прибираємо крапки зі списків */
 /* Обнуляємо padding and margin списків */
 .list {
@@ -89,6 +86,18 @@ img {
 	margin: 0;
 
 	list-style: none;
+}
+
+address {
+	font-style: normal;
+}
+
+button {
+	display: block;
+	margin: 0 auto;
+	cursor: pointer;
+	border: none;
+	border-radius: 4px;
 }
 
 /* Прибираємо підкреслення у посилань */
@@ -236,8 +245,6 @@ img {
 .section-hero-btn {
 	display: block;
 
-	margin-left: auto;
-	margin-right: auto;
 	padding: 10px 32px;
 
 	color: var(--accent-button-color);
@@ -249,7 +256,8 @@ img {
 	text-align: center;
 	letter-spacing: 0.06em;
 	background-color: var(--accent-color);
-	cursor: pointer;
+
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* ---------ОСОБЛИВОСТІ РОБОТИ--------- */
@@ -364,7 +372,6 @@ img {
 	max-width: 231px;
 }
 .adress-list .link {
-	font-style: normal;
 	color: var(--second-text-color);
 	font-size: inherit;
 	line-height: 1.71;
@@ -375,7 +382,6 @@ img {
 }
 
 .adress-list {
-	font-style: normal;
 	margin: bottom 60px;
 }
 
@@ -413,7 +419,6 @@ img {
 	color: var(--title-text-color);
 	background-color: var(--secondary-background-color);
 	font-family: inherit;
-	cursor: pointer;
 }
 
 .portfolio-list-btn.primary {
@@ -463,9 +468,8 @@ img {
 
 .card-portfolio {
 	padding: 20px 24px;
-	border-left: 1px solid var(--cards-border-color);
-	border-right: 1px solid var(--cards-border-color);
-	border-bottom: 1px solid var(--cards-border-color);
+	border: 1px solid var(--cards-border-color);
+	border-top: none;
 }
 
 .project-list-title {
